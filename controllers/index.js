@@ -22,7 +22,7 @@ const createCountry = async (req, res) => {
 };
 
 // Read all countries
-const findAllCountries = async (req, res) => {
+const getAllCountries = async (req, res) => {
   try {
     const countries = await Country.find();
     return res.status(200).json({
@@ -36,7 +36,7 @@ const findAllCountries = async (req, res) => {
 };
 
 // Read country by ID
-const findCountryByID = async (req, res) => {
+const getCountryByID = async (req, res) => {
   const {
     id
   } = req.params;
@@ -124,7 +124,7 @@ const createRecipe = async (req, res) => {
   }
 };
 // Read all recipes
-const findAllRecipes = async (req, res) => {
+const getAllRecipes = async (req, res) => {
   try {
     const resp = await Recipe.find();
     return res.status(200).json({
@@ -138,7 +138,7 @@ const findAllRecipes = async (req, res) => {
 };
 
 // Read recipe by ID
-const findRecipeByID = async (req, res) => {
+const getRecipeByID = async (req, res) => {
   const {
     id
   } = req.params;
@@ -156,7 +156,7 @@ const findRecipeByID = async (req, res) => {
 };
 
 // Read recipes by country ID
-const findCountryRecipes = async (req, res) => {
+const getCountryRecipes = async (req, res) => {
   try {
     const {
       id
@@ -218,14 +218,14 @@ const deleteRecipesByID = async (req, res) => {
 
 module.exports = {
   createCountry,
-  findAllCountries,
-  findCountryByID,
+  getAllCountries,
+  getCountryByID,
   updateCountryByID,
   deleteCountryByID,
   createRecipe,
-  findAllRecipes,
-  findRecipeByID,
-  findCountryRecipes,
+  getAllRecipes,
+  getRecipeByID,
+  getCountryRecipes,
   updateRecipesByID,
   deleteRecipesByID,
 
