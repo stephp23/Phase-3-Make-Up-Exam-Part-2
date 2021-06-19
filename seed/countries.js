@@ -1,5 +1,5 @@
 const db = require('../db')
-const Country = require('../models/country')
+const Country = require('../models/country');
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {

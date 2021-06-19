@@ -14,7 +14,7 @@ router.delete("/country/:id", controllers.deleteCountryByID);
 router.post("/recipes", controllers.createRecipe);
 router.get("/recipes", controllers.findAllRecipes);
 router.get("/recipe/:id", controllers.findRecipeByID);
-router.get("/country-recipes/:id", controllers.findCountryRecipes);
+router.get("/countryrecipes/:id", controllers.findCountryRecipes);
 router.patch("/recipe/:id", controllers.updateRecipesByID);
 router.delete("/recipe/:id", controllers.deleteRecipesByID);
 
